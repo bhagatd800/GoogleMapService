@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="")
+        meta(name="author", content="")
+        title  
+        // Bootstrap Core CSS
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        link(href="/stylesheets/bootstrap.min.css", rel="stylesheet")
+        link(href="/stylesheets/bootstrap.min.css.map", rel="stylesheet")
+        script(src="/javascripts/angscript.js")
+        script(src="/javascripts/angular.min.js.map")
+        script(src="/javascripts/home.js")
+        script(src="/javascripts/students.js")
+        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+            script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+            script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+    body
+        .container
+            div(ng-app="student", ng-controller="studentController")
+                br
+                br
+                center
+                    table
+                        tr
+                            td
+                                label(for="ex1") Name
+                            td
+                                input#ex1.form-control(type="text", ng-model="data.name")
+                        tr
+                            td
+                                label(for="ex2") Subject
+                            td
+                                select#ex2.form-control(ng-model="data.subject")
+                                    option Physic
+                                    option Math
+                                    option Chemistry
+                                    option History
+                        tr
+                            td
+                                label(for="ex3") Contact
+                            td
+                                input#ex1.form-control(type="text", ng-model="data.contact")
+                        tr
+                            td
+                                label(for="ex4") Address
+                            td
+                                input#ex1.form-control(type="text", gm-places-autocomplete="", ng-model="autocomplete")
+                        tr
+                            td
+                                button.btn.btn-success(ng-click="submit()") submit
+            script(src="/bower/angularjs-google-maps/dist/angularjs-google-maps.js")
+            script(src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places")
+            script(src="/javascripts/student.js")
+    //
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAitEnh0ztBEEv2lbbv_m2zWomn_ozie4M&libraries=places&callback=initAutocomplete"
+        async defer></script>

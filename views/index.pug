@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(name="description", content="")
+        meta(name="author", content="")
+        title  
+        // Bootstrap Core CSS
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel="stylesheet")
+        link(href="/stylesheets/bootstrap.min.css", rel="stylesheet")
+        link(href="/stylesheets/bootstrap.min.css.map", rel="stylesheet")
+        script(src="/javascripts/angscript.js")
+        script(src="/javascripts/angular.min.js.map")
+        script(src="/javascripts/home.js")
+        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+            script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+            script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+    body
+        .container
+            center(ng-app="home", ng-controller="homeController")
+                br
+                br
+                br
+                br
+                br
+                br
+                br
+                br
+                h1.text-primary WELCOME!
+                br
+                br
+                h2.text-danger WHO ARE U?
+                br
+                table
+                    tr
+                        td
+                            button.btn.btn-primary(type="button", ng-click="student()")
+                                | Student
+                                td ................
+                                td
+                                    button.btn.btn-warning(type="button", ng-click="teacher()")
+                                        | Teacher
+    
