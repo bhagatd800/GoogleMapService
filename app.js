@@ -12,10 +12,7 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var app = express();
 
- mongoose.connect('mongodb://healthaditya:4b6U5ptwY3rTIXe8cmiBeHsVpTPFwGDHVMKOu6tN7BqUJSAZDvlBjZkhICg8DgmbXUAvpED2tHeC9Z1uyMygUA==@healthaditya.documents.azure.com:10255/?ssl=true&replicaSet=globaldb', {
-    useMongoClient: true
-  
-});
+ mongoose.connect('mongodb://healthaditya:4b6U5ptwY3rTIXe8cmiBeHsVpTPFwGDHVMKOu6tN7BqUJSAZDvlBjZkhICg8DgmbXUAvpED2tHeC9Z1uyMygUA==@healthaditya.documents.azure.com:10255/?ssl=true&replicaSet=globaldb');
 
 app.set('views', path.join(__dirname, 'views'));
 
